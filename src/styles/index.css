@@ -1,0 +1,139 @@
+@import url("./fonts.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-primary-1: #fff;
+  --color-primary-2: #1E1E1E;
+  --color-primary-3: #219F95;
+  --color-primary-4: #234894;
+  --color-primary-5: #696969;
+
+  --border-radius: 5px;
+}
+
+body,
+* {
+  font-family: Vazirmatn;
+  background-color: var(--color-primary-1);
+}
+
+.users {
+  display: grid;
+  /* grid-auto-rows: 20rem; */
+  grid-gap: 20px;
+  /* height: 100vh; */
+  /* width: 100vw; */
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: var(--color-primary-3);
+  padding: 1.5rem 1rem;
+  border-radius: var(--border-radius);
+  color: #fff;
+  margin-right: 4rem;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  place-self: center;
+}
+
+h1 {
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.user__image img {
+  width: 3.5rem;
+  border-radius: 1rem;
+  margin: 0 0.25rem 0 0.5rem;
+}
+
+.user__number {
+  background-color: var(--color-primary-3);
+  color: var(--color-primary-4);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem 0 0.5rem;
+}
+
+.user__uploadtext {
+  font-weight: 700;
+  font-size: medium;
+  color: var(--color-primary-4);
+}
+
+.user__submitdate {
+  color: var(--color-primary-5);
+  margin-right: 11rem;
+}
+
+.user__header {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem 0.5rem;
+}
+
+.user__footer {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.user__signupreq {
+  font-weight: 900;
+  font-size: medium;
+}
+
+.user__codereq {
+  color: var(--color-primary-5);
+}
+
+.user__name {
+  font-weight: 900;
+  font-size: medium;
+  color: var(--color-primary-2);
+}
+
+
+@media screen and (max-width: 767px) {
+  .users {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .users {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .users {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
